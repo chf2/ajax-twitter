@@ -24,7 +24,6 @@ $.UsersSearch.prototype.handleInput = function (event) {
 
 $.UsersSearch.prototype.renderResults = function(response) {
   this.$ul.empty();
-  console.log(response);
   response.forEach(function(el) {
     var $anchor = $('<a>').attr("href", "/users/" + el.id).text(el.username);
     var $button = $('<button>').addClass("follow-toggle");
